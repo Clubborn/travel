@@ -1,23 +1,21 @@
 import React from 'react'
 import camp from '../assets/camp.svg'
-import bg from '../assets/hero-bg.svg'
 import star from '../assets/star.svg'
 import play from '../assets/play.svg'
 
 const Hero = () => {
   return (
-    <section className={`relative py-20 w-full px-20 max-xl:px-16 max-xl:pr-0 max-lg:px-10 max-lg:py-6 overflow-hidden`}>
-        <div className='absolute h-[100vh] w-[100vw] top-[-9rem] left-[10%] 
-        bg-[url("src/assets/hero-bg.svg")] bg-left bg-50
-        max-2xl:left-0 
-        max-xl:hidden
-        z-[1]'></div>
-        <div className='flex gap-20 max-xl:flex-col'>            
+    <section className={`relative py-20 w-full px-20 max-xl:px-16   max-lg:p0 max-lg:py-6 overflow-hidden`}>
+    <div className='absolute h-screen w-screen bg-[url("src/assets/hero-bg.svg")] 
+    bg-cover bg-center xl:-right-0 xl:-top-12 lg:top-40 lg:right-2
+    md:top-40 md:right-0'></div>
+
+        <div className='flex relative gap-20 max-xl:flex-col z-10'>            
             <div className='flex-1'>
-                <img className='absolute max-lg:top-[2.5px] 
-                max-lg:left-10 max-xl:left-16 top-[59px] left-20 z-20' src={camp} alt="camp" />
+                <img className='absolute max-lg:-top-[1.5rem] 
+                max-lg:left-0 max-xl:left-0 -top-[1.5rem] left-0 z-20' src={camp} alt="camp" />
                 <h1 className='text-8xl font-bold mb-10 leading-[7rem] relative z-10'>Putuk Truno Camp Area</h1>
-                <p className='text-gray-500 text-xl max-w-[35rem]'>We want to be on each of your journeys seeking the satisfaction of seeing the incorruptible 
+                <p className='text-gray-500 text-xl xl:max-w-[35rem]'>We want to be on each of your journeys seeking the satisfaction of seeing the incorruptible 
                     beauty of nature. We can help you on an adventure around the world in just one app</p>
                 <div className='flex mt-10 items-center'>
                     <div className='flex gap-2 mr-10 h-10'>
@@ -39,8 +37,19 @@ const Hero = () => {
                 </div>
             </div>
             <div className='flex-1'>
-                <div className='relative bg-grey w-[268px] h-[200px] z-10 rounded-3xl'>
-
+                <div className='relative bg-grey w-[268px] z-10 rounded-3xl px-8 py-8'>
+                    <h4 className='text-gray-400'>Location</h4>
+                    <h3 className='text-white font-bold text-2xl mb-8'>Aguas Calientes</h3>
+                    <div className='flex gap-8 text-gray-400'>
+                        <div className=''>
+                            <p>Distance</p>
+                            <p className='text-white font-bold text-lg'>173.28 mi</p>
+                        </div>
+                        <div>
+                            <p>Elevation</p>
+                            <p className='text-white font-bold text-lg'>2.040 km</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
